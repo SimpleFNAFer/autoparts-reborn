@@ -1,7 +1,7 @@
 package com.autoparts.partservice;
 
 import com.autoparts.partservice.model.Part;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@AllArgsConstructor
 public class MainController {
 
-    @Autowired
     private MainService mainService;
     @GetMapping("/all")
     public List<Part> all() {
